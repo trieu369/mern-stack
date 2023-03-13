@@ -6,6 +6,7 @@ const workoutRoutes = require('./routes/workouts')
 
 const app = express()
 
+const PORT = process.env.PORT || 3030;
 
 app.use(express.json())
 
@@ -21,7 +22,7 @@ app.use('/api/workouts',workoutRoutes)
 mongoose.connect(process.env.MONG_URL)
 .then(() => {
     app.listen(process.env.PORT, () =>{
-        console.log('App ias liaasteninga on port ',process.env.PORT)
+        console.log(`Server started on port ${PORT}`)
     })
 } )
 .catch((err) => {
