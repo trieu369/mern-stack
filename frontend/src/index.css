@@ -97,3 +97,16 @@ div.error {
   border-radius: 4px;
   margin: 20px 0;
 }
+
+input.error{
+  border : 1px solid var(--error)
+}
+
+.delete {
+  color: red !important;
+  transition: .4s color ease-in-out;
+}
+
+.delete:hover{
+  color: rgba(248, 104, 104, 0.6) !important;
+}
